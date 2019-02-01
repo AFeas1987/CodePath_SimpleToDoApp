@@ -5,7 +5,6 @@ import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -34,7 +33,7 @@ public abstract class ItemRoom extends RoomDatabase {
             synchronized (RoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ItemRoom.class, DATABASE_NAME)
-//                                .fallbackToDestructiveMigration()
+                                .fallbackToDestructiveMigration()
                                 .addCallback(roomCallback)
                                 .build();
                 }
@@ -47,22 +46,22 @@ public abstract class ItemRoom extends RoomDatabase {
         INSTANCE = null;
     }
 
-    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
+//    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
-        private final RoomAccessor accessor;
+//        private final RoomAccessor accessor;
 
-        PopulateDbAsync(ItemRoom room) {
-            accessor = room.accessRoom();
-        }
+//        PopulateDbAsync(ItemRoom room) {
+//            accessor = room.accessRoom();
+//        }
 
-        @Override
-        protected Void doInBackground(final Void... params) {
+//        @Override
+//        protected Void doInBackground(final Void... params) {
 //            accessor.deleteAll();
 //            ToDoItem item = new ToDoItem("Hello");
 //            accessor.insert(item);
 //            item = new Word("World");
 //            accessor.insert(item);
-            return null;
-        }
-    }
+//            return null;
+//        }
+//    }
 }

@@ -27,9 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add"
+        android:src="@drawable/ic_assignment_black_24dp"
         app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="48dp" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,7 +4,7 @@
 
 Submitted by: **Alex Feaser**
 
-Time spent: **8** hours spent in total
+Time spent: **9** hours spent in total
 
 ## User Stories
 
@@ -25,21 +25,28 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [X] RecyclerView added for increased performance and functionality (including custom Adaper and ViewModel)
-* [X] Short click opens Item for edit, long click allows for drag repositioning of Items (not yet persistent)
+* [X] RecyclerView added for increased performance and functionality
+* [X] Implements the new Android Jetpack Architecture Component (AAC) design using ViewModel and LiveData
+* [X] Short click opens Item for edit
+* [X] Swipe an item to delete it
+* [X] Long click allows for animated drag repositioning of Items (not persistent)
+* [X] Input validation for item creation with button animation and snackbar on failure
+* [X] Toggling an item's star in RecyclerView updates the appropriate value in database
 * [X] Code duplication minimized for Item creation and editting 
-* [ ] Save/restore instance states
 * [X] Star-style checkbox for marking an item as "important"
+* [X] Item creation EditText uses AutoComplete, text suggestions, and word capitalization
+* [X] Clip-art icon used for FloatingActionButton
 * [ ] Add spinner to ActionBar with sorting options
 * [ ] Add date members to Item class (created, modified) and getTimeRemaining() method
 * [ ] App opens into new 'User select' activity, MainActivity only displays the current User's Items
-* [ ] Add checkbox to ActionBar to 'Show items from all users', dynamically add 'by User' as a sorting option when checked
+* [ ] Add checkbox to ActionBar to 'Show items from all users'
+* [ ] Dynamically add 'by User' as a sorting option when checked
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/rrLsYB7.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/MFUomUX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -49,11 +56,11 @@ As part of your pre-work submission, please reflect on the app and answer the fo
 
 **Question 1:** "What are your reactions to the Android app development platform so far? Compare and contrast Android's approach to layouts and user interfaces in past platforms you've used."
 
-**Answer:** Android Studio and Google's additions to the Java libraries are a significant improvement to vanilla Java.  There is a decent learning curve when it comes to interfacing with XML, R, and Gradle, but these tools are not only incredibly effective, they also provide important insights into structurization and organization of a project.
+**Answer:** Google's additions to the Java libraries are a significant improvement to vanilla Java.  There is a decent learning curve when it comes to interfacing with XML, R, and Gradle, but these tools are not only incredibly effective, they also provide important insights into structurization and organization of a project.
 
 **Question 2:** "Take a moment to reflect on the `ArrayAdapter` used in your pre-work. How would you describe an adapter in this context and what is its function in Android? Why do you think the adapter is important? Explain the purpose of the `convertView` in the `getView` method of the `ArrayAdapter`."
 
-**Answer:** I skipped this part of the pre-work, as I knew that I would eventually replace ListView with RecyclerView.  In doing so, I had to create a RecyclerView Adapter, which is of a somewhat higher complexity, but generally does the same job of *converting data or a collection of data into View-able layout(s)*, thus acting as a "bridge" between a dataset and the UI element in which it will be displayed.
+**Answer:** I skipped this part of the pre-work, as I knew that I would eventually replace ListView with RecyclerView, so I just started with it.  In doing so, I had to create a RecyclerView Adapter, which is of a somewhat higher complexity, but does the same job of *converting data or a collection of data into View-able layout(s)*, thus acting as a "bridge" between a dataset and the UI element in which it will be displayed.
 
 ## Notes
 
@@ -61,7 +68,7 @@ This was my first time including Room persistance support in Android.  I persona
 
 ## License
 
-    Copyright [2018] [Alex Feaser]
+    Copyright [2018-2019] [Alex Feaser]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

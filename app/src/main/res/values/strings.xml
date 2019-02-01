@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Simple To-Do List: AF2019</string>
-    <string name="name_hint">Your name</string>
+    <string name="title_hint">Title</string>
     <string name="body_hint">What do you have to do?</string>
 </resources>

@@ -18,7 +18,7 @@ public interface RoomAccessor {
     void insertItem(ToDoItem item);
 
 
-    @Query("SELECT * FROM db_items ORDER BY item_name desc")
+    @Query("SELECT * FROM db_items ORDER BY id desc")
     LiveData<List<ToDoItem>> fetchAllItems();
 
 

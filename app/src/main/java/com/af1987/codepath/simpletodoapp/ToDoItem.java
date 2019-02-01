@@ -10,22 +10,23 @@ public class ToDoItem {
     @PrimaryKey (autoGenerate = true)
     private int id;
 
-    @ColumnInfo(name = "item_name")
-    private String name;
+    @ColumnInfo(name = "title")
+    private String title;
 
     @ColumnInfo (name = "starred")
     private boolean starred;
 
-//    @ColumnInfo(name = "modified_at")
+//    @ColumnInfo(title = "modified_at")
 //    @TypeConverters({TimestampConverter.class})
 //    private Date modifiedAt;
 
+    @ColumnInfo (name = "body")
     private String body;
 
 
-    public ToDoItem(String name, String body, boolean starred) {
+    public ToDoItem(String title, String body, boolean starred) {
         this.body = body;
-        this.name = name;
+        this.title = title;
         this.starred = starred;
     }
 
@@ -34,8 +35,8 @@ public class ToDoItem {
     public void setId(int id) {this.id = id;}
     public String getBody() {return body;}
     void setBody(String body) {this.body = body;}
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
+    public String getTitle() {return title;}
+    public void setTitle(String title) {this.title = title;}
     public boolean isStarred() {return starred;}
     void setStarred(boolean starred) {this.starred = starred;}
     public void toggleStarred() {starred = !starred;}
